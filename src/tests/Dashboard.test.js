@@ -1,6 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-//import Title from './Title';
+import Enzyme, { shallow, render, mount } from 'enzyme';
+import { createSerializer } from 'enzyme-to-json';
+import sinon from 'sinon';
+
 import Dashboard from '../components/Layouts/Dashboard/Dashboard'
 
 let wrapped = shallow(<Dashboard title="Dashboard"/>);

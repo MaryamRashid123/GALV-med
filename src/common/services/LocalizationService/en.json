@@ -2,5 +2,13 @@
   "GALVMED": "GALV-med",
   "HOME": "Home",
   "LOGOUT": "Logout",
-  "DASHBOARD": "Dashboard"
+  "DASHBOARD": "Dashboard",
+  "REQUIRED": "Required",
+  "WHOLE_NUMBER_REQUIRED": "Whole Number Required",
+  "USERNAME": "Username",
+  "PASSWORD": "Password",
+  "LOGIN": "Login",
+  "KEEP_SIGNED_IN": "Keep me signed in",
+  "INTERNAL_SERVER_ERROR": "Internal Server Error",
+  "INTERNAL_SERVER_ERROR_MESSAGE": "The server encountered an internal error and was unable to complete your request."
 }

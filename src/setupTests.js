@@ -7,3 +7,9 @@ import '@testing-library/jest-dom';
 import { configure } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 configure({ adapter: new Adapter() });
+
+
+// import React from "react";
+// import Enzyme, { shallow, render, mount } from "enzyme";
+// import { createSerializer } from "enzyme-to-json";
+// import sinon from "sinon";

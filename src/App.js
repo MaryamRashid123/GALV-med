@@ -2,6 +2,7 @@ import './App.css';
 import LOCALIZATION from './common/services/LocalizationService';
 import Page404 from './components/ErrorPages/Page404';
 import Page500 from './components/ErrorPages/Page500';
+import Login from './components/Login/Login';
 import APP_URL from './common/applicationUrls';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; //https://css-tricks.com/the-hooks-of-react-router/
 
@@ -34,11 +35,11 @@ function App() {
           */}
 
           {/* Login */}
-          {/* <Route
+          <Route
             path={ APP_URL.LOGIN }
             name={ LOCALIZATION.LOGIN }
             component={ Login }
-          /> */}
+          />
 
           {/* Page 404 */}
           <Route
