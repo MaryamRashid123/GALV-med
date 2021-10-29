@@ -19,7 +19,7 @@
     "no-obj-calls": "warn",
     "no-undef": "warn",
     "max-len": ["warn", 150],
-    "max-statements": ["warn", 50]
+    "max-statements": ["warn", 50] //per function
   },
   "plugins": ["prettier"]
 }

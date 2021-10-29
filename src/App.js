@@ -1,22 +1,24 @@
 import './App.css';
 import LOCALIZATION from './common/services/LocalizationService';
-//import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import Page404 from './components/ErrorPages/Page404';
 import Page500 from './components/ErrorPages/Page500';
 import APP_URL from './common/applicationUrls';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'; //https://css-tricks.com/the-hooks-of-react-router/
 
 // import { message } from 'antd';
 
 // Redux
-// import { useSelector } from "react-redux";
-// import Loading from "./components/Loading/Loading";
+// import { useSelector } from 'react-redux';
+// import Loading from './components/Loading/Loading';
+// import Loadable from 'react-loadable';
+// import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom'; //https://css-tricks.com/the-hooks-of-react-router/
-// import Loadable from "react-loadable";
 
-// Base Layout
+
+
+// // Base Layout
 // const BaseLayout = Loadable({
-//   loader: () => import("./components/BaseLayout/BaseLayout"),
+//   loader: () => import('./components/BaseLayout/BaseLayout'),
 //   loading: Loading,
 // });
 

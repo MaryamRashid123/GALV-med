@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dashboard should render the Component correctly 1`] = `
+<div
+  className="secondary-header"
+>
+  <Row
+    className="align-items-center"
+    gutter={
+      Array [
+        16,
+        8,
+      ]
+    }
+  >
+    <Col
+      span="10"
+    >
+      <h1>
+        Dashboard
+      </h1>
+    </Col>
+  </Row>
+</div>
+`;
