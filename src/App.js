@@ -1,28 +1,44 @@
-import './App.css';
-import LOCALIZATION from './common/services/LocalizationService';
+/*
+  Actual application starts from this file
+*/
+
+import React from 'react';
+import { 
+  BrowserRouter, 
+  Switch, 
+  Route 
+} from 'react-router-dom'; //https://css-tricks.com/the-hooks-of-react-router/
+import Loadable from 'react-loadable';
+
+// Antd
+import { message } from 'antd';
+
+// Application URLs
+import APP_URL from './constants/applicationUrls';
+
+// Components
+import PrivateRoute from './components/PrivateRoute';
+import Loading from './components/Loading';
 import Page404 from './components/ErrorPages/Page404';
 import Page500 from './components/ErrorPages/Page500';
-import Login from './components/Login/Login';
-import APP_URL from './common/applicationUrls';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'; //https://css-tricks.com/the-hooks-of-react-router/
+import Login from './components/Pages/Login';
 
-// import { message } from 'antd';
+// Localization
+import LOCALIZATION from './services/LocalizationService';
 
-// Redux
-// import { useSelector } from 'react-redux';
-// import Loading from './components/Loading/Loading';
-// import Loadable from 'react-loadable';
-// import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
+// Package.json
+// let packageJson = require('../package.json');
 
+message.config({
+  maxCount: 1,
+  duration: 3,
+})
 
-
-
-// // Base Layout
-// const BaseLayout = Loadable({
-//   loader: () => import('./components/BaseLayout/BaseLayout'),
-//   loading: Loading,
-// });
-
+// Base Layout
+const BaseLayout = Loadable({
+  loader: () => import('./components/BaseLayout/BaseLayout'),
+  loading: Loading
+});
 
 function App() {
   return (
@@ -56,7 +72,9 @@ function App() {
           />
 
           {/* Restricted Routes Here */}
-          {/* <PrivateRoute path="/" name={ LOCALIZATION.HOME } component={ BaseLayout } /> */}
+          <PrivateRoute 
+            component={ BaseLayout } 
+          />
         </Switch>
       </BrowserRouter>
     </div>

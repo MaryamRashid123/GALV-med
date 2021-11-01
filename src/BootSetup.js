@@ -1,38 +1,35 @@
 /*
   Boot component for application.
-  Initial reducer and keel whole applicaton within reducer
 */
 
 import React from 'react';
 
 // Redux
 import { Provider } from 'react-redux';
-//import createHistory from "history/createBrowserHistory";
+import createHistory from 'history/createBrowserHistory';
 
 // Configuration
-import configureStore from './common/store/configureStore';
-
-// constants
-//import { PLATFORMS } from '@cattleview/common/src/constants/GenericConstants';
+import configureStore from './store/configureStore';
 
 // Components
 import App from './App';
 
-//import StorageService from '@cattleview/common/src/services/StorageService';
+import StorageService from './services/StorageService';
 
 // Save Platform Web
-//StorageService.instance = new StorageService(PLATFORMS.WEB, localStorage);
+StorageService.instance = new StorageService(localStorage);
 
 // Stores & History
 const store = configureStore();
-//const history = createHistory();
+const history = createHistory();
 
-function BootSetup (props) {
+function BootSetup () {
 
   return (
     <>
-      <Provider store={store} 
-        // history={history}
+      <Provider 
+        store={store} 
+        history={history}
       >
         <App />
       </Provider>

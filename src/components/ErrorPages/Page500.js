@@ -6,7 +6,7 @@
 import React from 'react';
 
 // Localization
-import LOCALIZATION from '../../common/services/LocalizationService';
+import LOCALIZATION from '../../services/LocalizationService';
 
 function Page500(props) {
   return (
