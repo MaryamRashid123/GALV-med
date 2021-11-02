@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { apiClient } from './ApiClient';
+import { handleResponse } from './GenericResponseHandler';
 
 // GET Service
 const getService = async (url, data) => {
@@ -9,7 +10,7 @@ const getService = async (url, data) => {
       data
     );
 
-    return response;
+    return handleResponse(response);
   } catch (error) {
     throw error;
   }
@@ -24,7 +25,7 @@ const postService = async (url, data, opt={}) => {
       opt
     );
 
-    return response;
+    return handleResponse(response);
   } catch (error) {
     throw error;
   }
@@ -39,7 +40,7 @@ const putService = async (url, data, opt={}) => {
       opt
     );
 
-    return response;
+    return handleResponse(response);
   } catch (error) {
     throw error;
   }
@@ -54,7 +55,7 @@ const deleteService = async (url, data, opt={}) => {
       opt
     );
 
-    return response;
+    return handleResponse(response);
   } catch (error) {
     throw error;
   }

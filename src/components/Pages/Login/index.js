@@ -2,7 +2,8 @@
   Application Login
 */
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 // Antd
 import {
@@ -11,16 +12,30 @@ import {
 } from 'antd';
 
 // Redux
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-// Import Actions
-import { login } from '../../../store/actions/AuthAction';
+// Components
+import Loading from '../../Loading';
+
+// Actions
+import { login, logout } from '../../../store/actions/AuthAction';
+
+// Constants
+import APP_URL from '../../../constants/applicationUrls';
 
 // Localization
 import LOCALIZATION from '../../../services/LocalizationService';
 
 function Login() {
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  // Redux States
+  const { loading } = useSelector(state => state?.Auth);
+
+  useEffect(() => {
+    dispatch(logout())
+  }, [dispatch]);
   
   const onSubmit = (data) => {
     dispatch(
@@ -28,11 +43,14 @@ function Login() {
         ...data,
         appId: 1
       })
-    )
+    ).then(() => {
+      history.push(APP_URL.DASHBOARD);
+    })
   }
 
   return (
     <Row gutter={[0]}>
+      { loading && <Loading /> }
       <Col md={7} sm={9} xs={24} className="abstract-bg">
         <div className="login-form-wrapper d-flex flex-column">
           <div className="login-form-container">

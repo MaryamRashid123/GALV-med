@@ -1,4 +1,5 @@
 export const API_URLS = {
-  AUTHENTICATE: '/account/authenticate'
+  AUTHENTICATE: '/account/authenticate',
+  DASHBOARD: '/dashboard'
 };
   

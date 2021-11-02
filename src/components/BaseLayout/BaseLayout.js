@@ -16,10 +16,12 @@ const BaseLayout = () => (
   <div className="main-app">
     <header className="site-header">
       {/* Top Menus */}
+      Header
     </header>
     <section className="main-container">
       <div className="sidebar-nav">
         {/* Left Menus */}
+        Left Menu
       </div>
       <div className="main-section">
         <Suspense fallback={<Loading/>}>

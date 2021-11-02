@@ -6,7 +6,7 @@ import React from 'react';
 
 // Redux
 import { Provider } from 'react-redux';
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 
 // Configuration
 import configureStore from './store/configureStore';
@@ -21,7 +21,7 @@ StorageService.instance = new StorageService(localStorage);
 
 // Stores & History
 const store = configureStore();
-const history = createHistory();
+const history = createBrowserHistory();
 
 function BootSetup () {
 

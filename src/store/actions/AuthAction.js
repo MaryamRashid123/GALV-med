@@ -20,8 +20,19 @@ function login(loginModel) {
         loginModel
       );
 
+      // Save Access Token
+      const token = response?.result?.jwtToken || null;
+      StorageService.instance.setAccessToken(token);
+
+      // Save User Info
+      StorageService.instance.setUserInfo({
+        id: response?.result?.id,
+        username: response?.result?.username,
+        email: response?.result?.email
+      });
+
       dispatch(success(USER_ACTIONS.LOGIN_SUCCESS, response));
-      console.log(response);
+      
       return response;
     } catch (error) {
       dispatch(failure(USER_ACTIONS.LOGIN_FAILURE, error));
@@ -30,21 +41,20 @@ function login(loginModel) {
   };
 }
 
-// function logout() {
-//   return async (dispatch) => {
-//     try {
-//       dispatch(request(USER_ACTIONS.LOGOUT_REQUEST));
-//       await deleteLocalData();
-//       dispatch(success(USER_ACTIONS.LOGOUT_SUCCESS));
-//     } catch (error) {
-//       console.log(error);
-//       dispatch(failure(USER_ACTIONS.LOGOUT_FAILURE, error));
-//       throw error;
-//     }
-//   };
-// }
+function logout() {
+  return async (dispatch) => {
+    try {
+      dispatch(request(USER_ACTIONS.LOGOUT_REQUEST));
+      await StorageService.instance.deleteLoginData();
+      dispatch(success(USER_ACTIONS.LOGOUT_SUCCESS));
+    } catch (error) {
+      dispatch(failure(USER_ACTIONS.LOGOUT_FAILURE, error));
+      throw error;
+    }
+  };
+}
 
 export {
   login,
-  // logout,
+  logout
 };
