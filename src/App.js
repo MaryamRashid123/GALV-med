@@ -23,6 +23,9 @@ import Page404 from './components/ErrorPages/Page404';
 import Page500 from './components/ErrorPages/Page500';
 import Login from './components/Pages/Login';
 
+// Styling
+import './assets/sass/style.scss';
+
 // Localization
 import LOCALIZATION from './services/LocalizationService';
 
