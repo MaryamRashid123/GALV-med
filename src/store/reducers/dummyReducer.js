@@ -1,4 +1,4 @@
-import { DUMMY_ACTIONS } from '../../constants/ActionConstants';
+import { DUMMY_ACTIONS } from '../../constants/ActionKeys';
 //import { deleteListingRecord, updateListingRecord } from "../../helpers/GeneralHelper";
 
 let initialState = {

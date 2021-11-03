@@ -14,7 +14,7 @@ export const APP_ENVIRONMENT = {
       baseURL: 'http://demo1.folio3.com:8983/UserManagementAPI/api/v1',
     },
     [BUILD_MODE.DEV]: {
-      baseURL: 'http://demo1.folio3.com:8983/UserManagementAPI/api/v1'
+      baseURL: 'http://10.164.1.17/api/v1'
     },
     [BUILD_MODE.QA]: {
       baseURL: 'http://demo1.folio3.com:8983/UserManagementAPI/api/v1'

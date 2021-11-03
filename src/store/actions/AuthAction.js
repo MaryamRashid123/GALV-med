@@ -1,10 +1,10 @@
 // Service
-import service from '../../services/api/Service';
+import service from '../../services/Api/Service';
 import StorageService from '../../services/StorageService';
 
 // Constatns
-import { USER_ACTIONS } from '../../constants/ActionConstants';
-import { API_URLS } from '../../constants/UrlConstants';
+import { USER_ACTIONS } from '../../constants/ActionKeys';
+import { API_URLS } from '../../constants/ApiUrl';
 
 // General
 import { request, success, failure } from '.';

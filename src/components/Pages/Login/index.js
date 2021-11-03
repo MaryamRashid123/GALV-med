@@ -21,7 +21,7 @@ import Loading from '../../Loading';
 import { login, logout } from '../../../store/actions/AuthAction';
 
 // Constants
-import APP_URL from '../../../constants/applicationUrls';
+import APP_URL from '../../../constants/ApplicationUrls';
 
 // Localization
 import LOCALIZATION from '../../../services/LocalizationService';
@@ -39,10 +39,7 @@ function Login() {
   
   const onSubmit = (data) => {
     dispatch(
-      login({
-        ...data,
-        appId: 1
-      })
+      login(data)
     ).then(() => {
       history.push(APP_URL.DASHBOARD);
     })
@@ -59,7 +56,7 @@ function Login() {
               <Form onFinish={onSubmit}>
                 <h3>{LOCALIZATION.LOGIN}</h3>
                 <Form.Item
-                  name="username"
+                  name="email"
                   rules={[{ required: true, message: LOCALIZATION.REQUIRED }]}
                 >
                   <Input placeholder={LOCALIZATION.USERNAME} />

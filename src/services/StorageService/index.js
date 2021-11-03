@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE_KEYS } from '../../constants/GenericConstants';
+import { LOCAL_STORAGE_KEYS } from '../../constants/General';
 
 export default class StorageService {
   static instance = null;

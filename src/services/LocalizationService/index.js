@@ -1,5 +1,5 @@
 /* eslint-disable no-extend-native */
-import { LANGUAGE } from '../../constants/LanguageConstants';
+import { LANGUAGE } from '../../constants/General';
 
 // language files
 import EN from './en.json';
