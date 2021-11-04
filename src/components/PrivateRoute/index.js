@@ -7,7 +7,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 // Application URL
-import APP_URL from '../../constants/applicationUrls';
+import APP_URL from '../../constants/ApplicationUrls';
 
 // Service
 import StorageService from '../../services/StorageService';

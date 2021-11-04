@@ -4,7 +4,7 @@
 
 import axios from 'axios';
 import StorageService from '../StorageService'
-import { APP_ENVIRONMENT } from '../../constants/AppEnvironmentConstants';
+import { APP_ENVIRONMENT } from '../../constants/AppEnvironment';
 
 export const apiClient = () => {
   const baseUrl = APP_ENVIRONMENT.config().baseURL;

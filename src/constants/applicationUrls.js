@@ -5,7 +5,6 @@ const urls = {
   },
   LOGIN: '/login', // Login
   DASHBOARD: '/dashboard', // Dashboard
-
 };
 
 export default urls;

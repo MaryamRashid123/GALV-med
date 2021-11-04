@@ -3,19 +3,17 @@
 */
 
 import React from 'react';
-import APPLICATION_URL from './applicationUrls';
+import APPLICATION_URL from './ApplicationUrls';
 import LOCALIZATION from '../services/LocalizationService';
 
 // Routes
 
 // Left Menus
-const Dashboard = React.lazy(() => import('../components/Pages/Dashboard/Dashboard'));
+const Dashboard = React.lazy(() => import('../components/Pages/Dashboard'));
 
 
-const routes = [
-  // Left menu Routes
-  { path: APPLICATION_URL.DASHBOARD, exact: true, name: LOCALIZATION.DASHBOARD, component: Dashboard, noId: true },
-
+const ROUTES = [
+  { path: APPLICATION_URL.DASHBOARD, exact: true, name: LOCALIZATION.DASHBOARD, component: Dashboard },
 ];
 
-export default routes;
+export default ROUTES;

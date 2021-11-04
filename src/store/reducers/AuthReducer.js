@@ -1,4 +1,4 @@
-import { USER_ACTIONS } from '../../constants/ActionConstants';
+import { USER_ACTIONS } from '../../constants/ActionKeys';
 
 let initialState = {
   loading: false,

@@ -14,7 +14,7 @@ import Loadable from 'react-loadable';
 import { message } from 'antd';
 
 // Application URLs
-import APP_URL from './constants/applicationUrls';
+import APP_URL from './constants/ApplicationUrls';
 
 // Components
 import PrivateRoute from './components/PrivateRoute';

@@ -7,7 +7,8 @@ import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 // Constants
-import APP_URL from '../../constants/applicationUrls';
+import APP_URL from '../../constants/ApplicationUrls';
+import ROUTES from '../../constants/Routes';
 
 // Components
 import Loading from '../Loading';
@@ -26,29 +27,27 @@ const BaseLayout = () => (
       <div className="main-section">
         <Suspense fallback={<Loading/>}>
           <Switch>
-            {/* {
-              routes.map((route, index) => {
-                let { id, noId} = route;
-                const actions = permissions[id];
+            {
+              ROUTES.map((route, index) => {
+                let { 
+                  path, name, exact, component: Component
+                } = route;
 
-                return route.component && (!!noId || (!!id && !!actions && !!actions.length)) ?
-                  (<Route
-                    key={index}
-                    path={route.path}
-                    exact={route.exact}
-                    name={route.name}
-                    render={compProps => (
-                      <route.component 
-                        {...compProps} 
+                return(
+                  <Route
+                    key={ index }
+                    path={ path }
+                    exact={ exact }
+                    name={ name }
+                    render={() => (
+                      <Component 
                         title={ route.name } 
-                        actions={ actions } 
-                        permissions={ !!noId? permissions: null }
                       />
                     )}
-                  />)
-                  : (null);
+                  />
+                )
               })
-            } */}
+            }
 
             {/* Default case when application goes to root then waht should happens? */}
             <Redirect from="/" to={APP_URL.DASHBOARD} />
