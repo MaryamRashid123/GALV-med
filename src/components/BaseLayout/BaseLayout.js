@@ -8,7 +8,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 
 // Constants
 import APP_URL from '../../constants/ApplicationUrls';
-import ROUTES from '../../constants/Routes';
+import ROUTES from '../../constants/routes';
 
 // Components
 import Loading from '../Loading';

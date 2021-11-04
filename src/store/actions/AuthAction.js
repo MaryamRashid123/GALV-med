@@ -1,5 +1,5 @@
 // Service
-import service from '../../services/Api/Service';
+import service from '../../services/api/Service';
 import StorageService from '../../services/StorageService';
 
 // Constatns
