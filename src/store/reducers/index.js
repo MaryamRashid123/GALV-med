@@ -2,9 +2,6 @@
 import Auth from './AuthReducer';
 
 
-import dummyReducer from './dummyReducer';
-
-
 export default {
   Auth,	
 };

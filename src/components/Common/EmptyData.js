@@ -5,7 +5,7 @@
 import React from 'react';
 
 // Localization
-import LOCALIZATION from '@cattleview/common/src/services/LocalizationService';
+import LOCALIZATION from '../../services/LocalizationService';
 
 function EmptyData({ message }) {
   return (

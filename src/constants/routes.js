@@ -4,12 +4,12 @@
 
 import React from 'react';
 import APPLICATION_URL from './applicationUrls';
-import LOCALIZATION from './services/LocalizationService';
+import LOCALIZATION from '../services/LocalizationService';
 
 // Routes
 
 // Left Menus
-const Dashboard = React.lazy(() => import('../components/Layouts/Dashboard/Dashboard'));
+const Dashboard = React.lazy(() => import('../components/Pages/Dashboard/Dashboard'));
 
 
 const routes = [

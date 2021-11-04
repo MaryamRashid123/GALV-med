@@ -8,7 +8,7 @@ import React from 'react';
 import { Alert, Button } from 'antd';
 
 // Localization
-import LOCALIZATION from '@cattleview/common/src/services/LocalizationService';
+import LOCALIZATION from '../../services/LocalizationService';
 
 function ErrorMessage({ 
   error, 

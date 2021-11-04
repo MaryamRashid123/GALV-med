@@ -54,7 +54,9 @@ function logout() {
   };
 }
 
+
+
 export {
   login,
-  logout
+  logout,
 };

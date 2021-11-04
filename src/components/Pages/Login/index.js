@@ -18,7 +18,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Loading from '../../Loading';
 
 // Actions
-import { login, logout } from '../../../store/actions/AuthAction';
+import { login, logout} from '../../../store/actions/AuthAction';
 
 // Constants
 import APP_URL from '../../../constants/applicationUrls';
@@ -79,12 +79,13 @@ function Login() {
                 </Form.Item>
 
                 <Form.Item>
-                  <Button type="primary" htmlType="submit">
+                  <Button type="primary" htmlType="submit" className="test" >
                     {LOCALIZATION.LOGIN}
                   </Button>
                 </Form.Item>
 
               </Form>
+             
             </div>
           </div>
         </div>
@@ -92,5 +93,6 @@ function Login() {
     </Row>
   );
 }
+
 
 export default Login;
